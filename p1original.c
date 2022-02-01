@@ -21,7 +21,7 @@ int main ()
   sum=&s;
   a = input ();
   b = input ();
-  sum = add (a,b,*sum);
+  Main mein sum = add(a, b, &sum);
   output (a,b,sum);
   return 0;
 }
