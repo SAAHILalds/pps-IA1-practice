@@ -1,0 +1,25 @@
+b main
+Breakpoint 1 at 0x818: file p3original.c, line 26.
+(gdb) r
+Starting program: /home/runner/pps-IA1-practice/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p3original.c:26
+26    n=input();
+(gdb) n
+ enter the n value
+45
+27    sum=add(n);
+(gdb) n
+28    output(sum);
+(gdb) n
+29    return 0;
+(gdb) n
+30  }(gdb) n
+__libc_start_main (main=0x557703600810 <main>, argc=1, 
+    argv=0x7ffd55303c48, init=<optimized out>, 
+    fini=<optimized out>, rtld_fini=<optimized out>, 
+    stack_end=0x7ffd55303c38) at ../csu/libc-start.c:344
+344 ../csu/libc-start.c: No such file or directory.
+(gdb) n
+sun of numbers is 1035
