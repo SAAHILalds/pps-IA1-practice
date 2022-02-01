@@ -1,0 +1,41 @@
+b main
+Breakpoint 1 at 0x84d: file p4original.c, line 34.
+(gdb) r
+Starting program: /home/runner/pps-IA1-practice/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p4original.c:34
+34  {
+(gdb) n
+36    n=input();
+(gdb) n
+enter the size of array
+3
+37    int a[n];
+(gdb) n
+38    aray(n,a);
+(gdb) n
+enter the elements
+13
+enter the elements15
+enter the elements32
+39    sum=add(n,a);
+(gdb) n
+40    output(sum);
+(gdb) s
+output (sum=60) at p4original.c:31
+31    printf("sum is %d",sum);
+(gdb) n
+32  }
+(gdb) n
+main () at p4original.c:41
+41    return 0;
+(gdb) n
+42  }(gdb) n
+__libc_start_main (main=0x558dd720083c <main>, argc=1, 
+    argv=0x7fffc2a9a3e8, init=<optimized out>, 
+    fini=<optimized out>, rtld_fini=<optimized out>, 
+    stack_end=0x7fffc2a9a3d8) at ../csu/libc-start.c:344
+344 ../csu/libc-start.c: No such file or directory.
+(gdb) n
+sum is 60
