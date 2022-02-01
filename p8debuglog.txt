@@ -1,0 +1,46 @@
+b main
+Breakpoint 1 at 0xa03: file p8original.c, line 65.
+(gdb) r
+Starting program: /home/runner/pps-IA1-practice/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p8original.c:65
+65  {
+(gdb) n
+66    int n=get_n();
+(gdb) n
+enter the number of complex numbers: 
+3
+67    complex c[n],res;
+(gdb) s
+68    input_n_complex(n,c);
+(gdb) n
+enter the real part: 12
+enter any imaginary part : 45
+enter the real part: 23
+enter any imaginary part : 56
+enter the real part: 21
+enter any imaginary part : 34
+69    res=add_n_complex(n,c);
+(gdb) s
+add_n_complex (n=3, c=0x7ffddc0a2c60) at p8original.c:42
+42    res.img=0;
+(gdb) n
+43    res.real=0;
+(gdb) n
+44    for(int i=0;i<n;i++)
+(gdb) n
+46      res=add(res,c[i]);
+(gdb) n
+44    for(int i=0;i<n;i++)
+(gdb) n
+46      res=add(res,c[i]);
+(gdb) n
+44    for(int i=0;i<n;i++)
+(gdb) n
+46      res=add(res,c[i]);
+(gdb) n
+44    for(int i=0;i<n;i++)
+(gdb) c
+Continuing.
+12.00+45.00i23.00+56.00i21.00+34.00iis   56.00+135.00i
