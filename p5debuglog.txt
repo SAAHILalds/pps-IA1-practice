@@ -1,0 +1,61 @@
+b main
+Breakpoint 1 at 0x845: file p5original.c, line 34.
+(gdb) r
+Starting program: /home/runner/pps-IA1-practice/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5original.c:34
+34    n=input();
+(gdb) n
+Enter a number:
+45
+35    sq=my_sqrt(n);
+(gdb) s
+my_sqrt (n=45) at p5original.c:11
+11    double mid,start=0,end=n;
+(gdb) n
+12    while (end-start>0.0000001)
+(gdb) s
+14      mid=(start+end)/2;
+(gdb) n
+15      if (mid*mid<n)
+(gdb) n
+19      if (mid*mid>=n)
+(gdb) n
+21        end=mid;
+(gdb) n
+12    while (end-start>0.0000001)
+(gdb) n
+14      mid=(start+end)/2;
+(gdb) n
+15      if (mid*mid<n)
+(gdb) n
+19      if (mid*mid>=n)
+(gdb) f
+#0  my_sqrt (n=45) at p5original.c:19
+19      if (mid*mid>=n)
+(gdb) n
+21        end=mid;
+(gdb) n
+12    while (end-start>0.0000001)
+(gdb) 
+14      mid=(start+end)/2;
+(gdb) n
+15      if (mid*mid<n)
+(gdb) n
+17        start=mid;
+(gdb) n
+19      if (mid*mid>=n)
+(gdb) n
+12    while (end-start>0.0000001)
+(gdb) n
+14      mid=(start+end)/2;
+(gdb) n
+15      if (mid*mid<n)
+(gdb) n
+19      if (mid*mid>=n)
+(gdb) n
+21        end=mid;
+(gdb) c
+Continuing.
+your square root of 45.000000 is 6.708204
